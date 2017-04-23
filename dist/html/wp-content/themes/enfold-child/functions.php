@@ -401,3 +401,17 @@ function custom_things() {
 	}
 
 	add_filter( 'upload_mimes', 'cc_mime_types' );
+
+	/*------------------------------------*\
+	   Turn off Portfolio
+	\*------------------------------------*/
+
+	// This is not needed for this project
+
+	function remove_portfolio() {
+
+		remove_action( 'init', 'portfolio_register' );
+
+	}
+
+	add_action( 'after_setup_theme', 'remove_portfolio' );
