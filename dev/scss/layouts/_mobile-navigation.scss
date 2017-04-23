@@ -1,0 +1,45 @@
+/*--------------------------------------
+   Mobile Navigation
+--------------------------------------*/
+
+// Notes...
+
+#advanced_menu_hide {
+
+	&:hover {}
+
+}
+
+#mobile-advanced {
+
+	li {}
+
+		a {
+
+			&:before {}
+
+			&:hover {}
+
+		}
+
+			.avia-bullet {}
+
+			.avia-menu-text {}
+
+			.avia-menu-fx {}
+
+				.avia-arrow-wrap {}
+
+					.avia-arrow {}
+
+	.current-menu-item {
+
+		a {
+
+			&:hover {}
+
+		}
+
+	}
+
+}

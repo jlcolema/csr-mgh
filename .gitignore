@@ -1,0 +1,10 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+node_modules/
+dev/_backup/
+dev/_design/
+dev/_documents/
+dist/html/wp-content/uploads/
+dist/html/wp-content/themes/enfold-child/assets/
+dist/html/wp-content/themes/enfold-child/style.css

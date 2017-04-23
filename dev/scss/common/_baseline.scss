@@ -1,0 +1,382 @@
+/*--------------------------------------
+   Baseline
+--------------------------------------*/
+
+// Notes...
+
+html {
+
+	// font-size: 62.5%;
+	// -webkit-text-size-adjust: 100%;
+	// -ms-text-size-adjust: 100%;
+	// box-sizing: border-box !important;
+	// background-color: none;
+
+}
+
+*,
+*:before,
+*:after {
+
+	// box-sizing: inherit !important;
+
+}
+
+body {
+
+	// margin: 0;
+	// @include font-size(16);
+	// line-height: 1.625; // 26px, 26/16
+	// font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// color: $black;
+	// background-color: $white;
+	// -webkit-font-smoothing: antialiased;
+
+}
+
+// Block Level
+
+h1 {
+
+	// margin: 1.277777778em 0;
+	// @include font-size(36);
+	// line-height: 1.277777778;
+	// font-weight: normal;
+
+}
+
+h2 {
+
+	// margin: 1.3125em 0;
+	// @include font-size(32);
+	// line-height: 1.3125;
+	// font-weight: normal;
+
+}
+
+h3 {
+
+	// margin: 1.357142857em 0;
+	// @include font-size(28);
+	// line-height: 1.357142857;
+	// font-weight: normal;
+
+}
+
+h4 {
+
+	// margin: 1.416666667em 0;
+	// @include font-size(24);
+	// line-height: 1.416666667;
+	// font-weight: normal;
+
+}
+
+h5 {
+
+	// margin: 1.5em 0;
+	// @include font-size(20);
+	// line-height: 1.5;
+	// font-weight: normal;
+
+}
+
+h6 {
+
+	// margin: 1.625em 0;
+	// @include font-size(16);
+	// line-height: 1.625; // 26px, 26/16
+	// font-weight: normal;
+
+}
+
+p {
+
+	// margin: 1.625em 0;
+
+}
+
+ol {
+
+	// margin: 1.625em 0;
+	// padding-left: 0.625em; // 10/16
+	// list-style-type: decimal;
+
+}
+
+ul {
+
+	// margin: 1.625em 0;
+	// padding-left: 0.5em; // 8px, 8/16
+	// list-style-type: square;
+
+}
+
+	li {}
+
+dl {
+
+	// margin: 1.625em 0;
+
+}
+
+	dt {}
+
+	dd {}
+
+table {}
+
+	thead {}
+
+		th {}
+
+	tbody {}
+
+		tr {}
+
+			td {}
+
+	tfoot {}
+
+article {}
+
+caption {}
+
+figure {}
+
+	figcaption {}
+
+blockquote {
+
+	// margin: 1.5em 0;
+	// @include font-size(20);
+	// line-height: 1.5;
+	// border-left-width: 5px;
+
+}
+
+// Inline
+
+em,
+i {
+
+	// font-style: italic;
+
+}
+
+b,
+strong {
+
+	// font-weight: bold;
+
+}
+
+cite {}
+
+a {
+
+	// color: $blue;
+	// text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {
+
+		// text-decoration: underline;
+
+	}
+
+}
+
+img {
+
+	// display: block;
+	// max-width: 100%;
+	// box-sizing: content-box;
+
+}
+
+svg {
+
+	// display: block;
+	// box-sizing: content-box;
+
+}
+
+iframe {
+
+	// display: block;
+	// width: 100%;
+	// max-width: 100%;
+	// box-sizing: content-box;
+
+}
+
+code {}
+
+sub,
+sup {}
+
+ins {}
+
+mark {}
+
+::-moz-selection {}
+
+::selection {
+
+	// background: $secondary-color-alternate-light;
+
+}
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+// Forms
+
+form {}
+
+	fieldset {
+
+		// margin: 0;
+		// padding: 0;
+		// border: none;
+
+	}
+
+		legend {
+
+			// display: block;
+			// margin: 0 0 10px 0;
+			// @include font-size(14);
+			// line-height: 1.571428571; // 22px, 22/14
+			// @include open-sans-bold;
+			// text-transform: uppercase
+
+		}
+
+		label {
+
+			// display: block;
+			// margin: 0 0 0.714285714em 0; // 10px, 10/14
+			// @include font-size(14);
+			// line-height: 1.571428571; // 22px, 22/14
+			// @include open-sans-regular;
+			// text-transform: uppercase;
+			// cursor: pointer;
+
+		}
+
+		input {
+
+			&[type="text"],
+			&[type="search"],
+			&[type="email"],
+			&[type="tel"],
+			&[type="password"] {
+
+				// Override general styles applied to browsers in iOS.
+
+				// -webkit-appearance: none;
+
+				// display: block;
+				// width: 100%;
+				// padding: 5px 10px;
+				// @include font-size(16);
+				// line-height: 1.625; // 26px, 26/16
+				// font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				// color: $black;
+				// border: 1px solid $gray;
+				// border-radius: 0;
+
+			}
+
+			&[type="checkbox"] {
+
+				// position: relative;
+				// top: -3px;
+				// margin: 0 7px 0 0;
+
+			}
+
+			&[type="radio"] {
+
+				// position: relative;
+				// top: -4px;
+				// margin: 0 5px 0 0;
+
+			}
+
+			&[type="button"],
+			&[type="submit"] {
+
+				// Override general styles applied to browsers in iOS.
+
+				// -webkit-appearance: none;
+
+				// display: block;
+				// width: 100%;
+				// padding: 20px 25px;
+				// @include font-size(14);
+				// line-height: 1.571428571; // 22px, 22/14
+				// @include open-sans-bold;
+				// text-transform: uppercase;
+				// text-align: center;
+				// color: $white;
+				// background: $blue;
+				// border: none;
+				// border-radius: 0;
+				// cursor: pointer;
+
+				&:hover,
+				&:focus {}
+
+			}
+
+		}
+
+		textarea {
+
+			// Override general styles applied to browsers in iOS.
+
+			// -webkit-appearance: none;
+
+			// display: block;
+			// width: 100%;
+			// max-width: 100%;
+			// padding: 8px 10px;
+			// @include font-size(16);
+			// line-height: 1.625; // 26px, 26/16
+			// font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			// color: $black;
+			// border: 1px solid $gray;
+			// border-radius: 0;
+
+		}
+
+		button {
+
+			// Override general styles applied to browsers in iOS.
+
+			// -webkit-appearance: none;
+
+			// display: block;
+			// width: 100%;
+			// padding: 20px 25px;
+			// @include font-size(14);
+			// line-height: 1.571428571; // 22px, 22/14
+			// @include open-sans-bold;
+			// text-transform: uppercase;
+			// text-align: center;
+			// color: $white;
+			// background: $blue;
+			// border: none;
+			// border-radius: 0;
+			// cursor: pointer;
+
+			&:hover,
+			&:focus {}
+
+		}

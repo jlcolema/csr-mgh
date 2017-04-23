@@ -1,0 +1,62 @@
+/*--------------------------------------
+   Miscellaneous
+--------------------------------------*/
+
+// Notes...
+
+// Wrap
+// -------------------------------------
+
+#wrap_all {
+
+	// background: none !important;
+
+}
+
+// Return to Top
+// -------------------------------------
+
+#scroll-top-link {
+
+// 	border: none;
+// 	background-color: $gray;
+// 	border-radius: 0;
+// 	opacitiy: 1;
+
+	.avia_hidden_link_text {
+
+// 		color: $white;
+
+	}
+
+	&:hover {
+
+// 		color: $white;
+// 		background-color: darken($gray, 10%);
+// 		border: none;
+
+	}
+
+}
+
+// Developer Mode
+// -------------------------------------
+
+// Notes...
+
+// #dev {
+
+// 	position: fixed;
+// 	left: 5px;
+// 	bottom: 5px;
+// 	width: auto;
+// 	padding: 5px 7px;
+// 	font-size: 12px;
+// 	line-height: 14px;
+// 	font-family: Helvetica, Arial, sans-serif;
+// 	text-transform: uppercase;
+// 	color: $white;
+// 	background: rgb(212, 176, 255);
+// 	z-index: 9999;
+
+// }
