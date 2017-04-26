@@ -5,3 +5,199 @@
 // Notes...
 
 #header {}
+
+	// Utilities
+
+	#header_meta {
+
+		background: none;
+		border-bottom: 1px solid lighten($black, 85%) !important;
+
+		.container {
+
+			@include group;
+
+		}
+
+			nav {
+
+				position: relative !important;
+				top: 0;
+				right: -11px;
+				float: right !important;
+				width: auto !important;
+				padding: 0;
+
+			}
+
+				ul {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					@include group;
+
+				}
+
+					li {
+
+						padding: 0 !important;
+						@include font-size(12);
+						line-height: 1.833333333;
+						font-weight: normal;
+						// text-transform: uppercase;
+						border-right: 1px solid lighten($black, 85%);
+
+						&:last-of-type {
+
+							border: none;
+
+						}
+
+					}
+
+						a {
+
+							display: block;
+							height: 30px;
+							padding: 4px 11px 0 11px;
+							font-weight: inherit;
+							color: $black;
+
+							&:hover {
+
+								color: $blue !important;
+
+							}
+
+						}
+
+					// Current page
+
+					.current-menu-item {
+
+						a {
+
+							color: $blue;
+
+							&:hover {}
+
+						}
+
+					}
+
+	}
+
+	// Main Header
+
+	#header_main {
+
+		// Logo
+
+		.av-logo-container {
+
+			.inner-container {}
+
+				// Main Logo
+
+				.logo {
+
+					a {
+
+						&:hover {}
+
+					}
+
+						img {}
+
+				}
+
+				#advanced_menu_toggle {}
+
+				// Secondary Logo
+
+				.additional-logo {
+
+					.logo-link-box {}
+
+						img {}
+
+					// First
+
+					&:first-of-type {}
+
+					// Second
+
+					&:last-of-type {}
+
+				}
+
+		}
+
+		// Primary Navigation
+
+		#header_main_alternate {
+
+			.container {}
+
+				nav {}
+
+					.avia-menu {}
+
+						.menu {}
+
+							li {}
+
+								a {
+
+									&:hover {}
+
+								}
+
+									.avia-bullet {}
+
+									.avia-menu-text {}
+
+									.avia-menu-fx {}
+
+								.sub-menu {
+
+									li {}
+
+										a {
+
+											&:hover {}
+
+										}
+
+											.avia-bullet {}
+
+											.avia-menu-text {}
+
+											.avia-menu-fx {}
+
+								}
+
+							// Current page
+
+							.current-menu-item {
+
+								a {
+
+									&:hover {}
+
+								}
+
+									.avia-bullet {}
+
+									.avia-menu-text {}
+
+									.avia-menu-fx {}
+
+							}
+
+		}
+
+	}
+
+	.header_bg {}
