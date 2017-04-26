@@ -32,8 +32,8 @@ add_action('ava_after_main_container', 'after_head_image_func');
 // additional logo
 add_action('ava_before_bottom_main_menu','custom_things');
 function custom_things() {
-	echo '<strong class="additional-logo" style="left: 0 !important; padding-top: 5px; position: absolute;"><div class="logo-link-box"><img style="height: 75px;" src="http://csr-mgh.org/wp-content/uploads/2017/04/mgh-logo.png"></div></strong>';
-	echo '<strong class="additional-logo" style="right: 0 !important; position: absolute;"><div class="logo-link-box"><img src="http://csr-mgh.org/wp-content/uploads/2017/04/harvard-logo.png"></div></strong>';
+	echo '<div class="secondary-logos"><div class="additional-logo logo-mgh"><img src="/wp-content/uploads/2017/04/mgh-logo.png"></div>';
+	echo '<div class="additional-logo logo-hms"><img src="/wp-content/uploads/2017/04/harvard-logo.png"></div></div>';
 }
 
 
