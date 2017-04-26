@@ -96,11 +96,25 @@
 
 		.av-logo-container {
 
-			.inner-container {}
+			.inner-container {
+
+				position: relative;
+				// background: pink;
+
+			}
 
 				// Main Logo
 
 				.logo {
+
+					position: absolute;
+					left: -5px;
+					top: 50%;
+					float: none;
+					height: auto;
+					margin: -37px 0 0 0;
+					transform: none;
+					z-index: 1;
 
 					a {
 
@@ -114,21 +128,63 @@
 
 				#advanced_menu_toggle {}
 
-				// Secondary Logo
+				// Secondary Logos
 
-				.additional-logo {
+				.secondary-logos {
 
-					.logo-link-box {}
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin: -25px 0 0 0;
+					@include group;
+					z-index: 1;
 
-						img {}
+					.additional-logo {
 
-					// First
+						float: left;
+						height: 50px;
+						margin: 0 20px 0 0;
 
-					&:first-of-type {}
+						img {
 
-					// Second
+							filter: grayscale(100%);
 
-					&:last-of-type {}
+						}
+
+						// Massachusetts General Hospital
+
+						&.logo-mgh {
+
+							img {
+
+								height: 50px;
+
+							}
+
+						}
+
+						// Harvard Medical School
+
+						&.logo-hms {
+
+							position: relative;
+							top: -1px;
+
+							img {
+
+								height: 36px;
+
+							}
+
+						}
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
 
 				}
 
