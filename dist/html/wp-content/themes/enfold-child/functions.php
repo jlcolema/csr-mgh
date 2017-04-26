@@ -80,7 +80,7 @@ function custom_things() {
 			'colorset-header_color-bg2'             => '#f8f8f8',
 
 			// Primary color
-			'colorset-header_color-primary'         => '#109bc5',
+			'colorset-header_color-primary'         => '#0d7ebb',
 
 			// Hightlight color
 			'colorset-header_color-secondary'       => '#88bbc8',
@@ -122,7 +122,7 @@ function custom_things() {
 			'colorset-main_color-bg2'               => '#f8f8f8',
 
 			// Primary color
-			'colorset-main_color-primary'           => '#109bc5',
+			'colorset-main_color-primary'           => '#0d7ebb',
 
 			// Highlight color
 			'colorset-main_color-secondary'         => '#88bbc8',
@@ -159,7 +159,7 @@ function custom_things() {
 			--------------------------------------*/
 
 			// Background color
-			'colorset-alternate_color-bg'           => '#109bc5',
+			'colorset-alternate_color-bg'           => '#0d7ebb',
 
 			// Alternate background color
 			'colorset-alternate_color-bg2'          => '#0f81a1',
@@ -201,7 +201,7 @@ function custom_things() {
 			--------------------------------------*/
 
 			// Background color
-			'colorset-footer_color-bg'              => '#109bc5', // $primary-color
+			'colorset-footer_color-bg'              => '#0d7ebb', // $primary-color
 
 			// Alternate background color
 			'colorset-footer_color-bg2'             => '#36a8c7',
@@ -243,10 +243,10 @@ function custom_things() {
 			--------------------------------------*/
 
 			// Background color
-			'colorset-socket_color-bg'              => '#11abd6', // $primary-color-dark
+			'colorset-socket_color-bg'              => '#0d7ebb', // $primary-color-dark
 
 			// Alternate background color
-			'colorset-socket_color-bg2'             => '#109bc5',
+			'colorset-socket_color-bg2'             => '#0d7ebb',
 
 			// Primary color
 			'colorset-socket_color-primary'         => '#ffffff',
