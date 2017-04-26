@@ -65,7 +65,7 @@ function custom_things() {
 			--------------------------------------*/
 
 			// Heading
-			'google_webfont'                        => 'Quicksand',
+			'google_webfont'                        => 'Playfair Display:400,700',
 
 			// Body
 			'default_font'                          => 'Open Sans:400,600',
