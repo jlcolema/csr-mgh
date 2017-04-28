@@ -10,21 +10,25 @@
 
 	#header_meta {
 
-		background: none;
-		border-bottom: 1px solid lighten($black, 85%) !important;
+		background: lighten($black, 95%);
 
 		.container {
 
-			@include group;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			align-items: flex-start;
+			align-content: flex-start;
 
 		}
 
 			nav {
 
-				position: relative !important;
+				position: static !important;
 				top: 0;
-				right: -11px;
-				float: right !important;
+				float: none !important;
+				margin: 0 !important;
 				width: auto !important;
 				padding: 0;
 
@@ -46,11 +50,23 @@
 						line-height: 1.833333333;
 						font-weight: normal;
 						// text-transform: uppercase;
-						border-right: 1px solid lighten($black, 85%);
+						color: lighten($black, 50%);
+						border: none;
+
+						&:after {
+
+							content: "\002F";
+							margin: 0 10px;
+
+						}
 
 						&:last-of-type {
 
-							border: none;
+							&:after {
+
+								content: none;
+
+							}
 
 						}
 
@@ -58,11 +74,11 @@
 
 						a {
 
-							display: block;
+							display: inline-block;
 							height: 30px;
-							padding: 4px 11px 0 11px;
+							padding: 4px 0 0 0;
 							font-weight: inherit;
-							color: $black;
+							color: lighten($black, 50%);
 
 							&:hover {
 
@@ -86,6 +102,88 @@
 
 					}
 
+			.global-search {
+
+				// Temporarily hidden...
+
+				display: none;
+
+				form {
+
+					position: relative;
+					width: 100px;
+					margin: 0 0 0 10px;
+					padding: 0 30px 0 0;
+
+					@include desktop {
+
+						width: 200px;
+
+					}
+
+				}
+
+					#s {
+
+						width: 100%;
+						height: 30px;
+						padding: 0 10px;
+						@include font-size(12);
+						line-height: 1.833333333;
+						background: $white;
+						border-bottom: 1px solid lighten($black, 95%);
+						// border-left: none;
+						// border-right: none;
+
+						&::-webkit-input-placeholder {
+
+							font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+							color: lighten($black, 65%);
+
+						}
+
+						&::-moz-placeholder {
+
+							font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+							color: lighten($black, 65%);
+
+						}
+
+						&:-ms-input-placeholder {
+
+							font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+							color: lighten($black, 65%);
+
+						}
+
+						&:-moz-placeholder {
+
+							font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+							color: lighten($black, 65%);
+
+						}
+
+					}
+
+					#searchsubmit {
+
+						width: 30px;
+						min-width: 0;
+						height: 30px;
+						line-height: 30px;
+						transition: none;
+
+						&:focus,
+						&:hover {
+
+							background-color: $dark-blue;
+
+						}
+
+					}
+
+			}
+
 	}
 
 	// Main Header
@@ -99,7 +197,6 @@
 			.inner-container {
 
 				position: relative;
-				// background: pink;
 
 			}
 
@@ -132,10 +229,11 @@
 
 				.secondary-logos {
 
+					// display: none;
+
 					position: absolute;
 					right: 0;
-					top: 50%;
-					margin: -25px 0 0 0;
+					top: 42px;
 					@include group;
 					z-index: 1;
 
@@ -147,7 +245,7 @@
 
 						img {
 
-							filter: grayscale(100%);
+							// filter: grayscale(100%);
 
 						}
 
@@ -196,17 +294,67 @@
 
 			.container {}
 
-				nav {}
+				nav {
+
+					background: $blue;
+					background: linear-gradient(to bottom, $light-blue 0%, $blue 100%);
+					border-bottom: 1px solid $dark-blue;
+
+				}
 
 					.avia-menu {}
 
-						.menu {}
+						.menu {
 
-							li {}
+							position: relative;
+							display: block;
+							margin: 0;
+							padding: 0 50px 0 0;
+							list-style: none;
+							@include group;
+
+						}
+
+							li {
+
+								float: left;
+								// width: 20%;
+								@include font-size(14);
+								line-height: 1.714285714;
+								font-weight: bold;
+								border-right: 1px solid $light-blue;
+
+								&:hover > a {
+
+									background: $dark-blue;
+									background: linear-gradient(to bottom, $blue 0%, $dark-blue 100%);
+
+								}
+
+								&:last-of-type {
+
+									border: none;
+
+								}
+
+							}
 
 								a {
 
-									&:hover {}
+									display: block;
+									padding: 13px 20px 0 20px;
+									color: $white;
+									font-size: inherit;
+									line-height: inherit;
+									font-weight: inherit;
+									transition: none;
+
+									&:hover {
+
+										background: $dark-blue;
+										background: linear-gradient(to bottom, $blue 0%, $dark-blue 100%);
+
+									}
 
 								}
 
@@ -218,11 +366,39 @@
 
 								.sub-menu {
 
-									li {}
+									top: 50px;
+									width: 260px;
+									margin: 0;
+									padding: 10px 0;
+									background: lighten($blue, 57%);
+									list-style: none;
+									border: 1px solid $blue !important;
+									box-shadow: 0 2px 2px rgba($black, 0.15);
+
+									li {
+
+										position: static;
+										float: none;
+										height: auto;
+										font-weight: normal;
+										border: none;
+
+									}
 
 										a {
 
-											&:hover {}
+											float: none;
+											padding: 5px 20px;
+											color: $blue;
+											background: none !important;
+											border: none;
+
+											&:hover {
+
+												background: none;
+												text-decoration: underline;
+
+											}
 
 										}
 
@@ -232,13 +408,41 @@
 
 											.avia-menu-fx {}
 
+									.current-menu-item {
+
+										a {
+
+											background: none;
+											text-decoration: underline;
+
+											&:hover {}
+
+										}
+
+									}
+
 								}
+
+								// #menu-item-965 {
+
+								// 	.sub-menu {
+
+								// 		opacity: 1 !important;
+								// 		visibility: visible !important;
+
+								// 	}
+
+								// }
 
 							// Current page
 
-							.current-menu-item {
+							.current-menu-item,
+							.current-menu-parent, {
 
 								a {
+
+									background: $dark-blue;
+									background: linear-gradient(to bottom, $blue 0%, $dark-blue 100%);
 
 									&:hover {}
 
@@ -251,6 +455,158 @@
 									.avia-menu-fx {}
 
 							}
+
+		}
+
+		// Global Search
+
+		.global-search {
+
+			.container {
+
+				height: auto;
+
+			}
+
+				.inner-container {
+
+					position: relative;
+
+				}
+
+					// Toggle
+
+					a {
+
+						position: absolute;
+						right: 0;
+						top: -51px;
+						display: block;
+						width: 50px;
+						height: 50px;
+						padding: 0;
+						@include font-size(18);
+						line-height: 2.777777778;
+						text-align: center;
+						color: $white;
+						text-decoration: none;
+						z-index: 5;
+
+						&:hover {}
+
+					}
+
+						.avia_hidden_link_text {}
+
+					.avia-search-tooltip {
+
+						left: auto !important;
+						top: -1px !important;
+						right: 0;
+						padding: 10px;
+						background: lighten($blue, 57%);
+						border-color: $blue;
+						border-radius: 0;
+						box-shadow: none;
+						animation: none;
+
+						.inner_tooltip {}
+
+							form {
+
+								div {
+
+									width: 100%;
+									max-width: 100% !important;
+									margin: 0;
+									padding: 0 40px 0 0;
+									background: $white;
+									border-bottom: 1px solid rgba($black, 0.15);
+
+								}
+
+									#s {
+
+										height: 40px;
+										padding: 0 12px;
+										@include font-size(14);
+										line-height: 1.714285714;
+										font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+										color: $blue;
+										background: none;
+
+										&::-webkit-input-placeholder {
+
+											font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+											color: lighten($black, 65%);
+
+										}
+
+										&::-moz-placeholder {
+
+											font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+											color: lighten($black, 65%);
+
+										}
+
+										&:-ms-input-placeholder {
+
+											font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+											color: lighten($black, 65%);
+
+										}
+
+										&:-moz-placeholder {
+
+											font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+											color: lighten($black, 65%);
+
+										}
+
+									}
+
+									.button {
+
+										width: 40px !important;
+										min-width: 0;
+										height: 40px !important;
+										font-size: 18px !important;
+										line-height: 2.222222222 !important;
+										color: lighten($black, 65%);
+										background: none;
+
+										&:focus,
+										&:hover {
+
+											color: $blue;
+
+										}
+
+									}
+
+								.ajax_load {
+
+									display: none;
+
+								}
+
+								.ajax_search_response {
+
+									display: none;
+
+								}
+
+							}
+
+						.avia-arrow-wrap {
+
+							display: none;
+
+						}
+
+							.avia-arrow {}
+
+					}
 
 		}
 
