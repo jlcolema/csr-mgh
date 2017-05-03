@@ -4,7 +4,17 @@
 
 // Notes...
 
-#header {}
+#header {
+
+	border-bottom: 1px solid $blue;
+
+	@include desktop {
+
+		border: none;
+
+	}
+
+}
 
 	// Utilities
 
@@ -91,7 +101,8 @@
 					// Current page
 
 					.current-menu-item,
-					.events-archive & .menu-item-1074 {
+					.events-archive & .menu-item-1074,
+					.events-single & .menu-item-1074 {
 
 					// .events-archive #header_meta li .menu-item-1074 a
 
@@ -111,6 +122,14 @@
 
 	#header_main {
 
+		padding: 20px 0;
+
+		@include desktop {
+
+			padding: 0;
+
+		}
+
 		// Logo
 
 		.av-logo-container {
@@ -119,22 +138,39 @@
 
 				position: relative;
 
+				@include mobile {
+
+					padding: 0 80px 0 0;
+
+				}
+
 			}
 
 				// Main Logo
 
 				.logo {
 
-					position: absolute;
-					left: -5px;
-					top: 50%;
-					float: none;
-					height: auto;
-					margin: -37px 0 0 0;
-					transform: none;
-					z-index: 1;
+					display: block;
+					width: 100%;
+					height: auto !important;
+
+					@include desktop {
+
+						position: absolute;
+						left: -5px;
+						top: 50%;
+						float: none;
+						width: auto;
+						height: auto;
+						margin: -37px 0 0 0;
+						transform: none;
+						z-index: 1;
+
+					}
 
 					a {
+
+						// display: block;
 
 						&:hover {}
 
@@ -144,13 +180,30 @@
 
 				}
 
-				#advanced_menu_toggle {}
+				#advanced_menu_toggle {
+
+					width: 40px;
+					height: 40px;
+					margin: -20px 0 0 0;
+					line-height: 40px;
+					color: $white;
+					background: $blue;
+					border: none;
+					border-radius: 0;
+
+					&:hover {}
+
+				}
 
 				// Secondary Logos
 
 				.secondary-logos {
 
-					// display: none;
+					@include mobile {
+
+						display: none;
+
+					}
 
 					position: absolute;
 					right: 0;
@@ -213,14 +266,27 @@
 
 		#header_main_alternate {
 
+			background: $blue;
+			background: linear-gradient(to bottom, $light-blue 0%, $blue 100%);
+			border-bottom: 1px solid $dark-blue;
+			// box-shadow: 0 5px 9px rgba($blue, 0.35);
+
 			.container {}
 
 				nav {
 
-					background: $blue;
-					background: linear-gradient(to bottom, $light-blue 0%, $blue 100%);
-					border-bottom: 1px solid $dark-blue;
+					position: relative;
+					left: -16px;
+					// background: $blue;
+					// background: linear-gradient(to bottom, $light-blue 0%, $blue 100%);
+					// border-bottom: 1px solid $dark-blue;
 					// border-radius: 5px;
+
+					@media screen and (min-width: 860px) {
+
+						left: -20px;
+
+					}
 
 				}
 
@@ -231,7 +297,7 @@
 							position: relative;
 							display: block;
 							margin: 0;
-							padding: 0 50px 0 0;
+							padding: 0;
 							list-style: none;
 							@include group;
 
@@ -240,17 +306,9 @@
 							li {
 
 								float: left;
-								@include font-size(14);
-								line-height: 1.714285714;
+								@include font-size(16);
+								line-height: 1.625;
 								font-weight: bold;
-								// border-right: 1px solid $light-blue;
-
-								@media screen and (min-width: 860px) {
-
-									@include font-size(16);
-									line-height: 1.625;
-
-								}
 
 								&:after {
 
@@ -288,7 +346,7 @@
 								a {
 
 									display: inline-block;
-									padding: 13px 16px 0 16px;
+									padding: 12px 16px 0 16px;
 									color: $white;
 									font-size: inherit;
 									line-height: inherit;
@@ -379,7 +437,10 @@
 							// Current page
 
 							.current-menu-item,
-							.current-menu-parent, {
+							.current-menu-parent,
+							.single-core & #menu-item-965,
+							.single-symposium & #menu-item-973,
+							.single-award & #menu-item-974 {
 
 								a {
 
@@ -426,6 +487,14 @@
 		// Global Search
 
 		.global-search {
+
+			display: none;
+
+			@include mobile {
+
+				display: none;
+
+			}
 
 			.container {
 

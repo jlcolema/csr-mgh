@@ -205,7 +205,7 @@ array(
         "subtype" => AviaHelper::get_registered_sidebars(array('Default Sidebars' => ""), array('Displayed Everywhere'))
 
         ),
-        
+
 		array(
 
         "slug"  => "layout",
@@ -224,19 +224,19 @@ array(
                     ),
 
     ),
-		
-		
+
+
         array(
         "slug"  => "layout",
         "notice"  => __("These settings are only available for layouts with a main menu placed at the top",'avia_framework')." - <a href='".admin_url('admin.php?page=avia#goto_layout')."'>".__("Change layout",'avia_framework')."</a>",
         "id"    => "conditional_header",
         "type"  => "condition",
-        "class" => "avia-style", 
+        "class" => "avia-style",
         "condition" => array('option' => 'header_position', 'compare' => "equal_or_empty", "value"=>"header_top"),
         "nodescription" => true
         ),
-        
-        
+
+
         array(
 
         "slug"  => "layout",
@@ -254,19 +254,19 @@ array(
 
                     )
         ),
-        
-        
-        
+
+
+
         array(
         "slug"  => "layout",
         "notice"  => __("Only available if the logo is not",'avia_framework')." <a href='".admin_url('admin.php?page=avia#goto_header')."'>".__("below the menu",'avia_framework').".</a>",
         "id"    => "conditional_header2",
         "type"  => "condition",
-        "class" => "avia-style", 
+        "class" => "avia-style",
         "condition" => array('option' => 'header_layout', 'compare' => "contains", "value"=>"top_nav_header"),
         "nodescription" => true
         ),
-        
+
         array(
 
         "slug"  => "layout",
@@ -285,24 +285,24 @@ array(
 
                     )
         ),
-        
+
         array(
         "slug"  => "layout",
         "id"    => "conditional_header_end",
-        "type"  => "condition_end", 
+        "type"  => "condition_end",
         "nodescription" => true
-        ),
-        
-        array(
-        "slug"  => "layout",
-        "id"    => "conditional_header_end",
-        "type"  => "condition_end", 
-        "nodescription" => true
-        
         ),
 
-        
-    
+        array(
+        "slug"  => "layout",
+        "id"    => "conditional_header_end",
+        "type"  => "condition_end",
+        "nodescription" => true
+
+        ),
+
+
+
 
     array(
         "slug"  => "hierarchy",
