@@ -4,7 +4,11 @@
 
 // Notes...
 
-#main {}
+#main {
+
+	padding-bottom: 40px;
+
+}
 
 	// Section
 
@@ -1145,6 +1149,113 @@
 
 							}
 
+							// Award Entry
+
+							.award-entry {
+
+								// text-align: left;
+
+								.award-content {
+
+									h1 {}
+
+									h2 {
+
+										margin: 0 0 1em 0;
+										@include font-size(20);
+										line-height: 1.5;
+										font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+										font-weight: bold;
+										text-transform: uppercase;
+										color: $lighter-blue;
+
+									}
+
+									h3 {
+
+										margin: 0 0 1em 0;
+										@include font-size(24);
+										line-height: 1.416666667;
+
+									}
+
+									h4 {}
+
+									h5 {}
+
+									h6 {}
+
+								}
+
+								.award-awardees {
+
+									.award-awardees-title {}
+
+									table {}
+
+										tr {}
+
+											th {
+
+												color: $white;
+												background: $blue;
+												border-color: $blue;
+
+											}
+
+											td {}
+
+										.tr-year {}
+
+											.td-year {
+
+												font-weight: bold;
+												color: $blue;
+												background: lighten($blue, 50%);
+												border-color: lighten($blue, 50%);
+
+											}
+
+								}
+
+							}
+
+							// Symposium Entry
+
+							.symposium-entry {
+
+								h1 {}
+
+								h2 {
+
+									margin: 0 0 1em 0;
+									@include font-size(20);
+									line-height: 1.5;
+									font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+									font-weight: bold;
+									text-transform: uppercase;
+									color: $lighter-blue;
+
+								}
+
+								h3 {
+
+									margin: 0 0 1em 0;
+									@include font-size(24);
+									line-height: 1.416666667;
+
+								}
+
+								h4 {}
+
+								h5 {}
+
+								h6 {}
+
+								.symposium-date-and-time {}
+
+							}
+
 							// Form
 
 							.avia_ajax_form {
@@ -1669,6 +1780,89 @@
 							}
 
 						}
+
+					}
+
+					// Individual Symposium Entry
+					// -------------------------------------
+
+					// Notes...
+
+					// Learn More
+
+					.widget-symposium-learn-more {
+
+						ul {
+
+							float: none !important;
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							li {
+
+								margin: 0 0 0.25em 0;
+								@include font-size(14);
+								line-height: 1.714285714;
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
+
+							}
+
+								a {
+
+									&:hover {
+
+										color: $blue;
+
+									}
+
+								}
+
+					}
+
+					// Archive
+
+					.widget-symposium-archive {
+
+						ul {
+
+							float: none !important;
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							li {
+
+								margin: 0 0 0.25em 0;
+								@include font-size(14);
+								line-height: 1.714285714;
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
+
+							}
+
+								a {
+
+									&:hover {
+
+										color: $blue;
+
+									}
+
+								}
 
 					}
 
