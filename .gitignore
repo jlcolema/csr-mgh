@@ -1,6 +1,8 @@
 .DS_Store
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
+*.nova
 node_modules/
 dev/_backup/
 dev/_design/
