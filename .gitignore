@@ -1,12 +1,21 @@
 .DS_Store
-*.sublime-project
-*.sublime-workspace
 *.code-workspace
 *.nova
-node_modules/
-dev/_backup/
-dev/_design/
-dev/_documents/
-dist/html/wp-content/uploads/
-dist/html/wp-content/themes/enfold-child/assets/
-dist/html/wp-content/themes/enfold-child/style.css
+organize/*
+
+# Ignore everything in the root except the "wp-content" directory.
+
+dist/html/*
+!dist/html/wp-content/
+
+# Ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory.
+
+dist/html/wp-content/*
+!dist/html/wp-content/themes/
+
+# Ignore specific themes.
+
+dist/html/wp-content/themes/*
+!dist/html/wp-content/themes/enfold/
+!dist/html/wp-content/themes/enfold-child/
